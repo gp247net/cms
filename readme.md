@@ -30,7 +30,7 @@
 - GP247 builds a large, open ecosystem (plugin, template), helping users quickly build CMS, PMO, eCommerce, etc., according to your needs.
 
 <p align="center">
-    <img src="https://gp247.net/images/gp247-screen.jpg" width="100%">
+    <img src="https://static.gp247.net/page/gp247-screen.jpg" width="100%">
 </p>
 
 ## Laravel core:
