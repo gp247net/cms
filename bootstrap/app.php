@@ -14,5 +14,9 @@ return Application::configure(basePath: dirname(__DIR__))
         //
     })
     ->withExceptions(function (Exceptions $exceptions) {
-        //
+        $exceptions->report(function (\Throwable $e) {
+            if (function_exists('gp247_handle_exception')) {
+                gp247_handle_exception($e);
+            }
+        });
     })->create();
