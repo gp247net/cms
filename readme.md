@@ -48,7 +48,6 @@ GP247 1.x
     │     └── GP247
     │           ├── Core(+) //Customize controller of Core
     │           ├── Helpers(+) //Auto load Helpers/*.php
-    │           ├── Blocks(+) // The list of blades will be used to display on the admin homepage.
     │           ├── Plugins(+) //Use `php artisan gp247:make-plugin --name=NameOfPlugin`
     │           ├── Front(+) //Customize controller of Front 
     │           └── Templates(+) //Use `php artisan gp247:make-template --name=NameOfTempate`
