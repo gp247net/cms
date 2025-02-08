@@ -7,8 +7,8 @@
     "license": "MIT",
     "require": {
         "php": "^8.2",
-        "gp247/core": "dev-master",
-        "gp247/front": "dev-master",
+        "gp247/core": "~1.0",
+        "gp247/front": "~1.0",
         "laravel/framework": "^11.31",
         "laravel/tinker": "^2.9"
     },

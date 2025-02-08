@@ -1,3 +1,7 @@
+<p align="right">
+    <b>English</b> | <a href="readme_vi.md">Tiếng Việt</a>
+</p>
+
 <p align="center">
     <img src="https://gp247.net/logo.png" width="150">
 </p>
@@ -67,11 +71,6 @@ GP247 1.x
     │     └── GP247_ACTIVE=1 //ON|OFF gp247
     └──...
 
-## Support the project
-Support this project :stuck_out_tongue_winking_eye: :pray:
-<p align="center">
-    <a href="https://www.paypal.me/LeLanh" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-green.svg" data-origin="https://img.shields.io/badge/Donate-PayPal-green.svg" alt="PayPal Me"></a>
-</p>
 
 ## Quick Installation Guide
 - **Step 1**: 
@@ -116,7 +115,7 @@ To create a zip file plugin
 
 >`php artisan gp247:make-plugin  --name=PluginName --download=1`
 
-**To create a template (`IF you have gp247/front installed`):**
+**To create a template:**
 
 >`php artisan gp247:make-template  --name=TemplateName`
 
