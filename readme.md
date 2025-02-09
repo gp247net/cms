@@ -1,7 +1,3 @@
-<p align="right">
-    <b>English</b> | <a href="readme_vi.md">Tiếng Việt</a>
-</p>
-
 <p align="center">
     <img src="https://gp247.net/logo.png" width="150">
 </p>
