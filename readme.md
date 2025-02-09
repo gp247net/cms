@@ -81,10 +81,36 @@ GP247 1.x
   If the APP_KEY is not set, use the following command to generate it: 
   >`php artisan key:generate`
 
-- **Step 3**: Initialize gp247
+- **Step 3**: Configure database
+  
+Default, GP247 uses mysql. The configuration will be saved in the .env file as follows:
+```
+  DB_CONNECTION=mysql
+  DB_HOST=127.0.0.1
+  DB_PORT=3306
+  DB_DATABASE=gp247
+  DB_USERNAME=root
+  DB_PASSWORD=
+```
+
+  If you want to use sqlite for quick testing, please change the connection in the .env file to sqlite, and comment out the DB_HOST, DB_PORT, DB_DATABASE, DB_USERNAME, DB_PASSWORD lines.
+  
+```
+    DB_CONNECTION=sqlite
+    #DB_HOST=127.0.0.1
+    #DB_PORT=3306
+    #DB_DATABASE=gp247
+    #DB_USERNAME=root
+    #DB_PASSWORD=
+```
+
+
+- **Step 4**: Initialize gp247
 
   Run the command: 
   >`php artisan gp247:install`
+
+Note: Running the `php artisan gp247:install` command will automatically call `php artisan gp247:front-install`.
 
 
 ## Useful information:

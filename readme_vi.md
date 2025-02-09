@@ -82,11 +82,35 @@ GP247 1.x
   Nếu APP_KEY chưa được thiết lập, sử dụng lệnh sau để tạo: 
   >`php artisan key:generate`
 
-- **Bước 3**: Cài đặt gp247
+- **Bước 3**: Cấu hình database
+  
+Mặc định, GP247 sử dụng mysql. Cấu hình sẽ được lưu trong file .env như sau:
+```
+  DB_CONNECTION=mysql
+  DB_HOST=127.0.0.1
+  DB_PORT=3306
+  DB_DATABASE=gp247
+  DB_USERNAME=root
+  DB_PASSWORD=
+```
+
+  Nếu bạn muốn sử dụng sqlite để kiểm tra nhanh, vui lòng thay đổi connection trong file .env thành sqlite, và comment các dòng DB_HOST, DB_PORT, DB_DATABASE, DB_USERNAME, DB_PASSWORD.
+  
+```
+    DB_CONNECTION=sqlite
+    #DB_HOST=127.0.0.1
+    #DB_PORT=3306
+    #DB_DATABASE=gp247
+    #DB_USERNAME=root
+    #DB_PASSWORD=
+```
+
+- **Bước 4**: Cài đặt gp247
 
   Chạy lệnh: 
   >`php artisan gp247:install`
 
+Lưu ý: Khi chạy lệnh `php artisan gp247:install` sẽ tự động gọi `php artisan gp247:front-install`.
 
 ## Thông tin hữu ích:
 
