@@ -37,7 +37,7 @@
 
 GP247 1.x
 
-> Core laravel framework 11.x 
+> Core laravel framework 12.x 
 
 
 ## Website structure using GP247

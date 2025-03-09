@@ -37,7 +37,7 @@
 
 GP247 1.x
 
-> Core Laravel framework 11.x 
+> Core Laravel framework 12.x 
 
 
 ## Cấu trúc website sử dụng GP247
