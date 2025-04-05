@@ -63,8 +63,6 @@ GP247 1.x
     ├── vendor
     │     ├── gp247/core
     │     └── gp247/front
-    ├── .env
-    │     └── GP247_ACTIVE=1 //ON|OFF gp247
     └──...
 
 
@@ -105,19 +103,17 @@ Default, GP247 uses mysql. The configuration will be saved in the .env file as f
 ```
 
 
-- **Step 4**: Initialize gp247
+- **Step 4**: Initialize GP247 CMS
 
   Run the command: 
-  >`php artisan gp247:install`
-
-Note: Running the `php artisan gp247:install` command will automatically call `php artisan gp247:front-install`.
+  >`php artisan cms:install`
 
 
 ## Useful information:
 
-**To view GP247 version**
+**To view GP247 CMS version**
 
->`php artisan gp247:info`
+>`php artisan cms:info`
 
 **Update gp247**
 
@@ -127,7 +123,7 @@ Update the package using the command:
 
 Then, run the command: 
 
->`php artisan gp247:update`
+>`php artisan cms:update`
 
 **To create a plugin:**
 

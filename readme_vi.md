@@ -63,8 +63,6 @@ GP247 1.x
     ├── vendor
     │     ├── gp247/core
     │     └── gp247/front
-    ├── .env
-    │     └── GP247_ACTIVE=1 //BẬT|TẮT gp247
     └──...
 
 
@@ -105,18 +103,17 @@ Mặc định, GP247 sử dụng mysql. Cấu hình sẽ được lưu trong fil
     #DB_PASSWORD=
 ```
 
-- **Bước 4**: Cài đặt gp247
+- **Bước 4**: Cài đặt GP247 CMS
 
   Chạy lệnh: 
-  >`php artisan gp247:install`
+  >`php artisan cms:install`
 
-Lưu ý: Khi chạy lệnh `php artisan gp247:install` sẽ tự động gọi `php artisan gp247:front-install`.
 
 ## Thông tin hữu ích:
 
 **Xem phiên bản GP247**
 
->`php artisan gp247:info`
+>`php artisan cms:info`
 
 **Cập nhật gp247**
 
@@ -126,7 +123,7 @@ Cập nhật package bằng lệnh:
 
 Sau đó chạy lệnh: 
 
->`php artisan gp247:update`
+>`php artisan cms:update`
 
 **Tạo plugin:**
 
