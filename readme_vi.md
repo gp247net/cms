@@ -118,7 +118,9 @@ Mặc định, GP247 sử dụng mysql. Cấu hình sẽ được lưu trong fil
 **Cập nhật gp247**
 
 Cập nhật package bằng lệnh: 
+
 >`composer update gp247/core`
+
 >`composer update gp247/front`
 
 Sau đó chạy lệnh: 

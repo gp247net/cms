@@ -118,7 +118,9 @@ Default, GP247 uses mysql. The configuration will be saved in the .env file as f
 **Update gp247**
 
 Update the package using the command: 
+
 >`composer update gp247/core`
+
 >`composer update gp247/front`
 
 Then, run the command: 
