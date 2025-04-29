@@ -17,27 +17,27 @@
 
 **What can GP247 do?**
 
-- Provides a powerful and flexible role management and user group solution.
+- Provides a powerful and flexible role management solution.
 - Offers a synchronous authentication API, enhancing API security with additional layers.
 - Build and manage Plugins/Templates that work in the system
 - Comprehensive access log monitoring system.
 - Continuously updates security vulnerabilities.
-- Supports multiple languages, easy management.
+- Multi-language support, easy to manage.
 - GP247 is FREE
 
 **And more:**
 
-- GP247 builds a large, open ecosystem (plugin, template), helping users quickly build CMS, PMO, eCommerce, etc., according to your needs.
+- GP247 builds an open ecosystem (plugin, template), helping users quickly build CMS, PMO, eCommerce, etc., according to your needs.
 
 <p align="center">
     <img src="https://static.gp247.net/page/gp247-screen.jpg" width="100%">
 </p>
 
-## Laravel core:
+## Core Laravel:
 
 GP247 1.x
 
-> Core laravel framework 12.x 
+> Core Laravel framework 12.x 
 
 
 ## Website structure using GP247
@@ -69,7 +69,7 @@ GP247 1.x
 ## Quick Installation Guide
 - **Step 1**: 
 
-  Refer to the command: 
+  Run the command: 
   >`composer create-project gp247/cms website-folder`
 
 - **Step 2**: Check the configuration in the .env file
@@ -81,7 +81,7 @@ GP247 1.x
 
 - **Step 3**: Configure database
   
-Default, GP247 uses mysql. The configuration will be saved in the .env file as follows:
+By default, GP247 uses MySQL. The configuration will be saved in the .env file as follows:
 ```
   DB_CONNECTION=mysql
   DB_HOST=127.0.0.1
@@ -91,7 +91,7 @@ Default, GP247 uses mysql. The configuration will be saved in the .env file as f
   DB_PASSWORD=
 ```
 
-  If you want to use sqlite for quick testing, please change the connection in the .env file to sqlite, and comment out the DB_HOST, DB_PORT, DB_DATABASE, DB_USERNAME, DB_PASSWORD lines.
+  If you want to use SQLite for quick testing, please change the connection in the .env file to sqlite, and comment out the DB_HOST, DB_PORT, DB_DATABASE, DB_USERNAME, DB_PASSWORD lines.
   
 ```
     DB_CONNECTION=sqlite
@@ -103,7 +103,7 @@ Default, GP247 uses mysql. The configuration will be saved in the .env file as f
 ```
 
 
-- **Step 4**: Initialize GP247 CMS
+- **Step 4**: Install GP247 CMS
 
   Run the command: 
   >`php artisan cms:install`
@@ -111,11 +111,11 @@ Default, GP247 uses mysql. The configuration will be saved in the .env file as f
 
 ## Useful information:
 
-**To view GP247 CMS version**
+**View GP247 version**
 
 >`php artisan cms:info`
 
-**Update gp247**
+**Update GP247**
 
 Update the package using the command: 
 
@@ -127,15 +127,15 @@ Then, run the command:
 
 >`php artisan cms:update`
 
-**To create a plugin:**
+**Create plugin:**
 
 >`php artisan gp247:make-plugin  --name=PluginName`
 
-To create a zip file plugin
+To create a zip file plugin:
 
 >`php artisan gp247:make-plugin  --name=PluginName --download=1`
 
-**To create a template:**
+**Create template:**
 
 >`php artisan gp247:make-template  --name=TemplateName`
 
@@ -143,33 +143,28 @@ To create a zip file template:
 
 >`php artisan gp247:make-template  --name=TemplateName --download=1`
 
-## Customize
+## Customization
 
-**Customize gp247-config and functions**
 
->`php artisan gp247:customize config`
+**Customize admin view**
 
-**Customize view admin**
+>`php artisan vendor:publish --tag=gp247:view-core`
 
->`php artisan gp247:customize view`
+**Override gp247_xxx functions**
 
-**Overwrite gp247_* helper functions**
+>Step 1: Add the list of functions you want to override to the array in `app/config/gp247_functions_except.php`
 
->Step 1: Use the command `php artisan gp247:customize config` to copy the file `app/config/gp247_functions_except.php`
+>Step 2: Create a new function in the `app/GP247/Helpers` directory, for example `app/GP247/Helpers/myfunction.php`
 
->Step 2: Add the list of functions you want to override to `gp247_functions_except.php`
+**Override gp247 controller files**
 
->Step 3: Create a new function in the `app/GP247/Helpers folder`
+>Step 1: Copy the controller files you want to override from vendor/gp247/core/src/Core/Controllers -> app/GP247/Core/Admin/Controllers
 
-**Overwrite gp247 controller files**
+>Step 2: Change `namespace GP247\Core\Admin\Controllers` to `namespace App\GP247\Core\Admin\Controllers`
 
->Step 1: Copy the controller files you want to override in vendor/gp247/core/src/Core/Controllers -> app/GP247/Core/Controllers
+**Override gp247 API controller files**
 
->Step 2: Change `namespace GP247\Core\Controllers` to `namespace App\GP247\Core\Controllers`
-
-**Overwrite gp247 API controller files**
-
->Step 1: Copy the controller files you want to override in vendor vendor/gp247/core/src/Api/Controllers ->  app/GP247/Core/Api/Controllers
+>Step 1: Copy the controller files you want to override from vendor/gp247/core/src/Api/Controllers -> app/GP247/Core/Api/Controllers
 
 >Step 2: Change `namespace GP247\Core\Api\Controllers` to `namespace App\GP247\Core\Api\Controllers`
 
@@ -177,7 +172,7 @@ To create a zip file template:
 
 Use prefix and middleware constants `GP247_ADMIN_PREFIX`, `GP247_ADMIN_MIDDLEWARE` in route declaration.
 
-References: https://github.com/gp247net/core/blob/master/src/routes.php
+Reference: https://github.com/gp247net/core/blob/master/src/Admin/routes.php
 
 
 
@@ -190,7 +185,7 @@ References: https://github.com/gp247net/core/blob/master/src/routes.php
 > `GP247_API_MODE=1` // To disable, set value 0
 
 **Data table prefixes**
-> `GP247_DB_PREFIX=gp247_` //Cannot change after install gp247
+> `GP247_DB_PREFIX=gp247_` //Cannot change after installing gp247
 
 **Path prefix to admin**
 > `GP247_ADMIN_PREFIX=gp247_admin`
